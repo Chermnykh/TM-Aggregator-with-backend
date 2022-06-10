@@ -2,7 +2,7 @@
 
 ## Want to use this project?
 
-1. Clone
+1. Clone this repository
 
 2. Create and activate a virtual environment:
 
