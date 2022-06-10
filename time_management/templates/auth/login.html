@@ -1,0 +1,41 @@
+{% extends "base.html" %}{% load static %}  {% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/auth.css' %}" />
+
+{% load crispy_forms_tags %}
+
+<!--Login--> 
+<div class="auth-container">
+    <div class="header-bar">    
+        <h1>Login</h1>
+    </div>
+  <form method="POST">
+    {% csrf_token %}
+    {{ login_form|crispy }}
+    <input class='auth-button' type="submit" value="Login" style="margin-top: 10px;">
+  </form>
+  <p><a href="{% url 'password_reset' %}">Forgot password?</a></p>
+  <p>Don't have an account? <a href="{% url 'register' %}">Register</a></p>
+</div>
+
+{% endblock %}
+
+
+
+
+<!-- <div class="task-container">
+    <div class="header-bar">
+        <h1>Login</h1>
+    </div>
+    <div class="card-body">
+        <form method="POST">
+            {% csrf_token %} 
+            {{form.as_p}}
+            <input class='task-button' type="submit" value="Login">
+        </form>
+        <p>Don't have an account? <a href="{% url 'register' %}">Register</a></p>
+    </div>
+</div> -->
+
+
+
+

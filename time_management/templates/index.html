@@ -1,0 +1,43 @@
+{% extends "base.html" %}{% load static %}  {% block content %}
+
+
+    <img class="flex_display">
+        <div>
+            <p class="text_header margin_auto_small">Want to control your time?</p>
+
+            <p class="text_logo margin_auto_small">You're in the right place! Our site will help you to organize your time, 
+                                                    just click on the button.</p>
+        </div>
+        <a href="{% url 'methods' %}" class="button_header margin_auto_small">Change your life!</a>
+        <img src="{% static 'img/img_header.png' %}" class="image_header margin_auto_small small_display_false">
+    </div>
+
+    <div class="container">
+        <h2 class="content_title">Just <b>3 steps</b> to start</h2>
+        <div class="blocks">
+        <a href="{% url 'register' %}">
+            <div class="block first_block">
+                <img class="img_block" src="{% static 'img/register.png' %}" alt="register">
+                <h3 class="title_block">Register</h3>
+                <p class="text_block">Lorem, ipsum dolor sit amet consectetur adipisicing elit</p>
+            </div>
+        </a>
+        <a href="{% url 'methods' %}">
+            <div class="block second_block">
+                <img class="img_block_2" src="{% static 'img/methods.png' %}" alt="method">
+                <h3 class="title_block">Choose your method</h3>
+                <p class="text_block">Lorem ipsum dolor, sit amet consectetur adipisicing elit?</p>
+            </div>
+        </a>
+        <a href="{% url 'methods' %}">
+            <div class="block third_block">
+                <img class="img_block" src="{% static 'img/use_method.png' %}" alt="method">
+                <h3 class="title_block">Use your method</h3>
+                <p class="text_block">Lorem, ipsum dolor sit amet consectetur adipisicing elit!</p>
+            </div>
+        </a>
+        </div>
+    </div>
+
+
+{% endblock content %}

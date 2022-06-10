@@ -1,0 +1,67 @@
+{% extends "base.html" %}{% load static %}  {% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/pomodoro.css' %}" />
+<!-- <link rel="stylesheet" type="text/css" href="{% static 'css/auth.css' %}" /> -->
+<script type="text/javascript">
+    var timer_time_1 = "{{ timer.timer_time_1 }}"
+    var timer_time_2 = "{{ timer.timer_time_2 }}"
+    var timer_time_3 = "{{ timer.timer_time_3 }}"
+    var timer_time_4 = "{{ timer.timer_time_4 }}"
+    var timer_time_5 = "{{ timer.timer_time_5 }}"
+    var timer_time_6 = "{{ timer.timer_time_6 }}"
+    var timer_time_7 = "{{ timer.timer_time_7 }}"
+    var timer_time_8 = "{{ timer.timer_time_8 }}"
+    var timer_time_max_1 = "{{ timer.timer_time_max_1 }}"
+    var timer_time_max_2 = "{{ timer.timer_time_max_2 }}"
+    var timer_time_max_3 = "{{ timer.timer_time_max_3 }}"
+    var timer_time_max_4 = "{{ timer.timer_time_max_4 }}"
+    var timer_time_max_5 = "{{ timer.timer_time_max_5 }}"
+    var timer_time_max_6 = "{{ timer.timer_time_max_6 }}"
+    var timer_time_max_7 = "{{ timer.timer_time_max_7 }}"
+    var timer_time_max_8 = "{{ timer.timer_time_max_8 }}"
+</script>
+<script src="{% static 'js/pomodoro.js' %}"></script>
+\
+<div class="auth-container">
+  <div class="header-bar">    
+    <h1>Pomodoro</h1>
+  </div>
+  <div class="container-fluid">
+    <div class="d-flex align-items-center justify-content-center flex-wrap">
+
+      <!--TIMER -->
+      <div class="my_timer mb-3 mx-3">
+        <div class="">
+          <h1 id="timer" onload="set_timer()">0:0</h1>
+        </div>
+        <div class="">
+          <h1 id="timer_task">Keep working!</h1>
+        </div>
+      </div>
+
+      <div class="row mb-3 mx-3">
+        <div class="col-6 my_button">
+        </div>
+        <div class="col-6">
+          <button type="button" onclick="start_stop_timer()" id="timer_button">Start</button>
+          <button type="button" onclick="post_restart_timer()" id="restart_button">Restart</button>
+        </div>
+      </div>
+
+      <!--PICTURES-->
+      <div class="row">
+        <div class="col-12 flex_row">
+          <div id="timer0" class="timer tomato"><span style="transform: scaleY(0.992667) rotate(180deg);"></span></div>
+          <div id="timer1" class="timer cup"> <span></span></div>
+          <div id="timer2" class="timer tomato"> <span></span></div>
+          <div id="timer3" class="timer cup"> <span></span></div>
+          <div id="timer4" class="timer tomato"> <span></span></div>
+          <div id="timer5" class="timer cup"> <span></span></div>
+          <div id="timer6" class="timer tomato"> <span></span></div>
+          <div id="timer7" class="timer pancake"> <span></span></div>
+        </div>  
+      </div>
+    </div>
+  </div>    
+</div>
+<script>init()</script>
+{% endblock content %}
