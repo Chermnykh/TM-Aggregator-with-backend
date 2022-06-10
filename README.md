@@ -25,7 +25,7 @@
     (env)$ python manage.py migrate
     ```
 
-5. Add your Stripe test secret key, test publishable key, endpoint secret and price API ID to the *settings.py* file:
+5. Add your Stripe test secret key, test publishable key, endpoint secret and price API ID to the *secret.py* file (but first create one):
 
     ```python
     STRIPE_PUBLIC_KEY = '<your test publishable key here>'
