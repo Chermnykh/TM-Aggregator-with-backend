@@ -1,0 +1,49 @@
+html {
+	height: 100vh;
+	overflow: hidden;
+}
+
+header {
+    height: 110px;
+}
+
+.content-container {
+	height: calc(100% - 110px);
+	overflow-y: auto;
+}
+
+.logo {
+	font-weight: bold;
+	font-size: 1.6em;
+}
+
+.open-menu {
+	z-index: 1024;
+}
+
+@media screen and (max-width: 480px) {
+	.slogan {
+		font-size: 1rem;
+	}
+}
+
+@media screen and (max-width: 420px) {
+	.slogan {
+        font-size: 0.8rem;
+        animation-duration: 3s;
+	}
+}
+
+@media screen and (max-width: 320px) {
+    header {
+        height: 70px;
+    }
+
+	.slogan {
+		display: none;
+    }
+    
+    .content-container {
+		height: calc(100% - 70px);
+	}
+}

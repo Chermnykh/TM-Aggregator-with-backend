@@ -1,0 +1,86 @@
+.task-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #fff;
+    border-top: 1px solid rgb(226, 226, 226);
+}
+
+.auth-container {
+    background-color: #fff;
+    font-family: 'Nunito', sans-serif;
+    /* padding-top: 50px; */
+    max-width: 800px;
+    margin: auto;
+    margin-top: 30px;
+    -webkit-box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
+    box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
+}
+
+.auth-container-sub {
+    background-color: #fff;
+    font-family: 'Nunito', sans-serif;
+    /* padding-top: 50px; */
+    max-width: 500px;
+    margin: auto;
+    margin-top: 30px;
+    -webkit-box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
+    box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
+}
+
+.plan {
+    max-width: 600px;
+}
+
+.account-img {
+    height: 125px;
+    width: 125px;
+    margin-right: 20px;
+    margin-bottom: 16px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+  
+.account-heading {
+    font-size: 2.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+
+.media {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.sub-button {
+    border: 1px solid #EB796F;
+    background-color: #FAFAFA;
+    color: #EB796F;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.sub-button:hover {
+    border: 1px solid #EB796F;
+    background-color: #FAFAFA;
+    color: #eb796fb3;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+a, p {
+  color: #4b5156;
+}

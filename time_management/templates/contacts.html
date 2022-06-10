@@ -1,0 +1,92 @@
+{% extends "base.html" %}{% load static %} {% block content %}
+
+<!-- <div style="margin: 80px;">
+  <h1>Contact</h1>
+  <h4>Contact us directly if you have any questions</h4>
+  <p>
+    Please write your name, eamil address and a message below if you have any questions.<br>
+    One of our staff members will be happy to contact you directly and answer your questions as soon as possible.
+  </p>
+  <form method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">Submit</button>
+  </form>
+</div> -->
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/tasks.css' %}" />
+
+
+<div class="task-container">
+    <div class="header-bar">    
+      <h1>Contact</h1><br>
+    </div>
+    <div class="header-bar">    
+      <h4>Contact us directly if you have any questions</h4><br>
+    </div>
+    <div class="header-bar">    
+      <p>
+        Please write your name, email address and a message below if you have any questions.<br>
+        One of our staff members will be happy to contact you directly and answer your questions as soon as possible.
+      </p>
+    </div>
+
+    <div class="card-body">
+        <form method="POST">
+            {% csrf_token %} 
+            {{form.as_p}}
+            <input class='task-button' type="submit" value="Send Message" style="margin-top: 10px;">
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <link rel="stylesheet" type="text/css" href="{% static 'css/contacts.css' %}" />
+
+<script src="{% static 'js/contacts.js' %}"></script>
+
+<center>
+  <h2>Thanks {{ name }}</h2>
+  <p>We received your email and will respond shortly</p>
+</center>
+
+<div class="feedback">
+  <h2>Contact us, {{request.user|title}}</h2>
+  <form name="form" action="{% url 'contact' %}" onsubmit="return validateForm()" method="POST">
+    {% csrf_token %}
+    Name <br><input type="text" placeholder="Enter your name" class="IP" id="name" name="name" onblur="checkName();"
+      required>
+    <span id="first_Check"></span><br>
+
+    Email <br><input type="text" placeholder="Enter your email" class="IP" id="email" name="email"
+      onblur="checkEmail();" required>
+    <span id="email_Check"></span><br>
+
+    Theme <br><input type="text" placeholder="Theme" class="IP" id="theme" name="theme" onblur="checkTheme();"
+      required>
+    <span id="theme_Check"></span><br>
+
+    Message <br><textarea name="message" placeholder="Enter your message" class="IP" id="message"
+      onblur="checkMessage();" required></textarea>
+    <span id="message_Check"></span> <br>
+
+    <input type="submit" value="Submit" id="summary" action="#">
+    <input type="reset" value="Reset">
+  </form>
+</div> -->
+{% endblock content %}
